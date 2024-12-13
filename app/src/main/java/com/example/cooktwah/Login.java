@@ -1,5 +1,6 @@
 package com.example.cooktwah;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
@@ -51,7 +53,22 @@ public class Login extends AppCompatActivity {
 
             mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task->
             {
-                if(task.isSuccessful())
+                FirebaseUser user = mAuth.getCurrentUser();
+                if(user!=null && !user.isEmailVerified())
+                {
+                    Toast.makeText(this, "Please verify your email before logging in.", Toast.LENGTH_SHORT).show();
+                    user.sendEmailVerification().addOnCompleteListener(emailTask -> {
+                        if (emailTask.isSuccessful()) {
+                            Toast.makeText(this, "Verification email sent. Please check your email.", Toast.LENGTH_LONG).show();
+                            // Redirect to login or verification activity
+                            Intent intent = new Intent(this, VerificationActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(this, "Failed to send verification email.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+                else if(task.isSuccessful() && user.isEmailVerified())
                 {
                     Toast.makeText(this, "SUCCESSFULLY LOGGED IN!", Toast.LENGTH_SHORT).show();
                 }

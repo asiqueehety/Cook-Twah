@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CookTwah"
         tools:targetApi="31">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.CookTwah.NoActionBar" />
+        <activity
+            android:name=".VerificationActivity"
+            android:exported="false" />
         <activity
             android:name=".Signup"
             android:exported="false" />
