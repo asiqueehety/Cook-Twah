@@ -13,6 +13,18 @@
         android:theme="@style/Theme.CookTwah"
         tools:targetApi="31">
         <activity
+            android:name=".YourRecipeDetails"
+            android:exported="false" />
+        <activity
+            android:name=".YourFav"
+            android:exported="false" />
+        <activity
+            android:name=".YourRcp"
+            android:exported="false" />
+        <activity
+            android:name=".MakeRcp"
+            android:exported="false" />
+        <activity
             android:name=".RecipeDetailActivity"
             android:exported="false" />
         <activity
@@ -47,6 +59,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

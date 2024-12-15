@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/back_button"
+    android:fontFamily="@font/amaticbold"
     android:layout_margin="10dp"
     android:padding="16dp"
     android:textSize="18sp"

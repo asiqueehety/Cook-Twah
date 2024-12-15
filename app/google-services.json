@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "19353787595",
+    "firebase_url": "https://cooktwah-default-rtdb.firebaseio.com",
     "project_id": "cooktwah",
     "storage_bucket": "cooktwah.firebasestorage.app"
   },

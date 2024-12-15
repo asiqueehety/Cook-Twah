@@ -91,6 +91,8 @@ class Recipe implements Serializable {
     private String instructions; // To store the instructions
     private List<RecipeDetail.Step> steps;
 
+
+
     public List<RecipeDetail.Step> getSteps() {
         return steps;
     }
@@ -220,31 +222,6 @@ public class CookFragment extends Fragment {
         return view;
     }
 
-//    // Method to fetch recipe steps
-//    private void fetchRecipeSteps(Recipe recipe) {
-//        RecipeDetailAPI detailAPI = RetrofitClient.getInstance().create(RecipeDetailAPI.class);
-//        detailAPI.getRecipeDetails(recipe.getId(), "75f8612744cb45718bf3f99a154ed709").enqueue(new retrofit2.Callback<List<RecipeDetail>>() {
-//            @Override
-//            public void onResponse(Call<List<RecipeDetail>> call, retrofit2.Response<List<RecipeDetail>> response) {
-//                if (response.isSuccessful() && response.body() != null && !response.body().isEmpty()) {
-//                    List<RecipeDetail.Step> steps = response.body().get(0).getSteps();
-//
-//                    // Display steps or pass them to another activity
-//                    displayRecipeSteps(steps);
-//                } else {
-//                    Toast.makeText(requireContext(), "Failed to fetch recipe steps", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<RecipeDetail>> call, Throwable t) {
-//                Toast.makeText(requireContext(), "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
-
-
-
     // Remove ingredient from list
     private void removeIngredient(String ingredient) {
         int index = selectedIngredients.indexOf(ingredient);
@@ -256,11 +233,4 @@ public class CookFragment extends Fragment {
             }
         }
     }
-//    private void displayRecipeSteps(List<RecipeDetail.Step> steps) {
-//        StringBuilder stepsDisplay = new StringBuilder("Recipe Steps:\n");
-//        for (RecipeDetail.Step step : steps) {
-//            stepsDisplay.append(step.getStep()).append("\n");
-//            Log.d("RecipeDetail", "Step: " + step.getStep()); // Log each step");
-//        }
-//    }
 }

@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.recyclerview)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -61,5 +62,7 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
 
     implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.google.firebase:firebase-database:20.0.5")
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
 
 }

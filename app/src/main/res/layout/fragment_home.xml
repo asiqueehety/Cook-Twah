@@ -1,17 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CookFragment"
-    android:background="@drawable/cooktwah_login">
+    android:background="@drawable/cooktwah_login"
+    tools:context=".CookFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/make_rcp"
+        android:layout_width="170dp"
+        android:layout_height="81dp"
+        android:backgroundTint="#247E51"
+        android:fontFamily="@font/sqpr"
+        android:text="Make a recipe! 🍳"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/your_rcp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <Button
+        android:id="@+id/your_rcp"
+        android:layout_width="170dp"
+        android:layout_height="67dp"
+        android:backgroundTint="#451616"
+        android:fontFamily="@font/sqpr"
+        android:text="Your Recipes 🍽️"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.638" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="26sp"
-        android:layout_gravity="top|center"/>
+        android:id="@+id/textView4"
+        android:layout_width="169dp"
+        android:layout_height="168dp"
+        android:fontFamily="@font/amaticbold"
+        android:gravity="center"
+        android:text="HEY THERE, CHEF!"
+        android:textColor="@color/black"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toTopOf="@+id/make_rcp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
