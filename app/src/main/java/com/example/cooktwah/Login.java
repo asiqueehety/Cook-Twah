@@ -71,6 +71,9 @@ public class Login extends AppCompatActivity {
                 else if(task.isSuccessful() && user.isEmailVerified())
                 {
                     Toast.makeText(this, "SUCCESSFULLY LOGGED IN!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, Homepage.class);
+                    startActivity(intent);
+                    finish();
                 }
                 else
                 {

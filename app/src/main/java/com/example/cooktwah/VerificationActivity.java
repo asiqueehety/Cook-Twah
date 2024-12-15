@@ -38,7 +38,7 @@ public class VerificationActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         if (user.isEmailVerified()) {
                             Toast.makeText(this, "SIGNED UP SUCCESSFULLY!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(this, MainActivity.class);
+                            Intent intent = new Intent(this, Homepage.class);
                             startActivity(intent);
                             finish();
                         } else {
